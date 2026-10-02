@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo dos felinos</title>
+    <script src="felino.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .gato {
+            width: 140px;
+        }
+
+        .gato img {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        #btnSorte {
+            background-color: #8b0000;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #numeroSorte {
+            display: block;
+            margin: 10px auto 0 auto;
+            width: 90px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gato">
+            <img id="gato01" src="Imagens/gato01.gif" alt="Gato 1">
+            <p>Clique em mim!</p>
+        </div>
+
+        <div class="gato">
+            <img id="gato02" src="Imagens/gato02.gif" alt="Gato 2">
+            <p>Clique sobre mim várias vezes!</p>
+            <p>Carinhos: <span id="contadorCarinhos">0</span></p>
+        </div>
+
+        <div class="gato">
+            <img id="gato03" src="Imagens/gato03.gif" alt="Gato 3">
+            <p>Passe o cursor do mouse sobre mim!</p>
+        </div>
+
+        <div class="gato">
+            <img id="gato04" src="Imagens/gato04.gif" alt="Gato 4">
+            <p id="textoGato04">lá lá lá lá lá</p>
+        </div>
+
+        <div class="gato">
+            <img id="gato05" src="Imagens/gato05.gif" alt="Gato 5">
+            <button type="button" id="btnSorte">Gerar número da sorte</button>
+            <input type="text" id="numeroSorte" readonly>
+        </div>
+    </div>
+</body>
+</html>

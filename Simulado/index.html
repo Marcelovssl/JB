@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Acesso ao sistema</title>
+    <script src="index.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        fieldset {
+            border: 2px solid green;
+            width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: green;
+        }
+
+        label {
+            color: green;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            margin: 15px 0 25px 0;
+            border: none;
+            border-bottom: 1px solid green;
+            outline: none;
+            font-size: 16px;
+            padding: 4px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #1b5e20;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Acesso ao sistema</legend>
+        <label for="nomeCompleto">Nome completo:</label>
+        <input type="text" id="nomeCompleto">
+        <button type="button" id="btnEntrar">Entrar</button>
+    </fieldset>
+</body>
+</html>
