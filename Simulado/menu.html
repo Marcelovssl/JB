@@ -1,14 +1,34 @@
-var nomeCompleto = localStorage.getItem("nomeCompleto") || "";
-var palavras = nomeCompleto.split(" ").filter(function (palavra) {
-    return palavra !== "";
-});
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu de opções</title>
+    <script src="menu.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
-var primeiroNome = palavras[0] || "";
-var ultimoNome = palavras[palavras.length - 1] || "";
+        h1 {
+            color: #1b5e20;
+            margin-top: 60px;
+        }
 
-document.getElementById("mensagemBoasVindas").innerHTML =
-    primeiroNome + " " + ultimoNome + ", seja bem-vindo ao jogo dos Felinos!";
-
-document.getElementById("btnConvidado").addEventListener("click", function () {
-    window.location.href = "felino.html";
-});
+        button {
+            background-color: #1b5e20;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mensagemBoasVindas"></h1>
+    <button type="button" id="btnConvidado">Entrar como convidado</button>
+</body>
+</html>
