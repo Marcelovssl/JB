@@ -1,26 +1,77 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/script.js" defer type="module"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Jogo dos Pares</title>
 </head>
 <body>
-    <form action="" class="formBotoes">
-        <select id="dificuldade">
-            <option value="1300">Fácil</option>
-            <option value="650" >Médio</option>
-            <option value="325">Difícil</option>
-        </select>
-        <input type="button" value="Play" id="btnPlay">
-        <input type="button" value="Pause" id="btnPause">
-        <input type="button" value="Stop" id="btnStop">
-    </form>
-    <div class="boxNroAleatorio">
-        <p id="nroAleatorio">_</p>
+    <div class="telaAcesso" id="telaAcesso">
+        <div class="boxAcesso">
+            <form class="formAcesso" id="formLogin">
+                <h1>Login</h1>
+                <input type="text" id="loginUsuario" placeholder="Usuário" required>
+                <input type="password" id="loginSenha" placeholder="Senha" required>
+                <p class="mensagem" id="msgLogin"></p>
+                <input type="submit" value="Entrar">
+                <input type="button" value="Criar conta" class="btnLink" id="btnIrCadastro">
+            </form>
+            <form class="formAcesso oculto" id="formCadastro">
+                <h1>Cadastro</h1>
+                <input type="text" id="cadNome" placeholder="Nome completo" required>
+                <input type="email" id="cadEmail" placeholder="E-mail" required>
+                <input type="text" id="cadUsuario" placeholder="Usuário" required>
+                <input type="password" id="cadSenha" placeholder="Senha (mín. 4 caracteres)" required minlength="4">
+                <input type="password" id="cadConfirma" placeholder="Confirmar senha" required>
+                <p class="mensagem" id="msgCadastro"></p>
+                <input type="submit" value="Cadastrar">
+                <input type="button" value="Já tenho conta" class="btnLink" id="btnIrLogin">
+            </form>
+        </div>
+    </div>
+    <div class="telaJogo oculto" id="telaJogo">
+        <form action="" class="formBotoes">
+            <div class="boxUsuario">
+                <span id="nomeUsuario"></span>
+                <input type="button" value="Sair" id="btnSair">
+            </div>
+            <select id="dificuldade">
+                <option value="1300">Fácil</option>
+                <option value="650" >Médio</option>
+                <option value="325">Difícil</option>
+            </select>
+            <input type="button" value="Play" id="btnPlay">
+            <input type="button" value="Pause" id="btnPause">
+            <input type="button" value="Stop" id="btnStop">
+        </form>
+        <div class="boxPlacar">
+            <div class="contador" id="boxTempo">
+                <p class="contadorTitulo">Tempo</p>
+                <p class="contadorValor" id="contTempo">_</p>
+            </div>
+            <div class="contador" id="boxPassaram">
+                <p class="contadorTitulo">Pares exibidos</p>
+                <p class="contadorValor" id="contPassaram">0</p>
+            </div>
+            <div class="contador" id="boxAcertos">
+                <p class="contadorTitulo">Acertos</p>
+                <p class="contadorValor" id="contAcertos">0</p>
+            </div>
+            <div class="contador" id="boxErros">
+                <p class="contadorTitulo">Erros</p>
+                <p class="contadorValor" id="contErros">0</p>
+            </div>
+        </div>
+        <div class="boxNroAleatorio" id="boxNroAleatorio">
+            <p id="nroAleatorio">_</p>
+        </div>
+        <div class="boxResultado oculto" id="boxResultado">
+            <p class="resultadoAcertos" id="resAcertos">0/0</p>
+            <p class="resultadoErros" id="resErros">Erros: 0</p>
+            <p class="resultadoTexto">Clique em Play para jogar novamente</p>
+        </div>
     </div>
 </body>
 </html>
