@@ -226,21 +226,3 @@ body {
     color: #24344d;
     margin-top: 20px;
 }
-@media (max-width: 700px) {
-    .formBotoes {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .boxUsuario {
-        width: 100%;
-    }
-    .formBotoes input[type="button"] {
-        margin-left: 0px;
-    }
-    .boxNroAleatorio p {
-        font-size: 150px;
-    }
-    .resultadoAcertos {
-        font-size: 90px;
-    }
-}
