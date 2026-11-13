@@ -1,17 +1,94 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-family: "Orbitron", sans-serif;
 }
-
 body {
     background-color: #e8edf5;
 }
-
+.oculto {
+    display: none !important;
+}
+.telaAcesso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #24344d;
+}
+.boxAcesso {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #e8edf5;
+    outline: #526b89 solid 2px;
+    outline-offset: 4px;
+}
+.formAcesso {
+    display: flex;
+    flex-direction: column;
+}
+.formAcesso h1 {
+    font-size: 30px;
+    color: #24344d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.formAcesso input[type="text"],
+.formAcesso input[type="email"],
+.formAcesso input[type="password"] {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #dce6f2;
+    color: #24344d;
+    border: none;
+    margin-bottom: 10px;
+}
+.formAcesso input:focus {
+    outline: #3976a8 solid 2px;
+}
+.formAcesso input[type="submit"],
+.formAcesso input[type="button"] {
+    height: 50px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #3976a8;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    transition: all 0.1s;
+}
+.formAcesso input[type="button"].btnLink {
+    background-color: #24344d;
+}
+.formAcesso input[type="submit"]:hover,
+.formAcesso input[type="button"]:hover {
+    background-color: #5b91bd;
+    cursor: pointer;
+}
+.formAcesso input[type="submit"]:active,
+.formAcesso input[type="button"]:active {
+    transform: scale(0.95);
+}
+.mensagem {
+    min-height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+.mensagem.erro {
+    color: #b94b4b;
+}
+.mensagem.sucesso {
+    color: #3976a8;
+}
 .formBotoes {
     display: flex;
     justify-content: right;
@@ -19,7 +96,6 @@ body {
     padding: 10px;
     background-color: #24344d;
 }
-
 .formBotoes select {
     padding: 10px;
     border-radius: 10px;
@@ -29,7 +105,6 @@ body {
     border: none;
     margin-right: 10px;
 }
-
 .formBotoes input[type="button"] {
     width: 80px;
     height: 80px;
@@ -44,31 +119,128 @@ body {
     margin-left: 10px;
     transition: all 0.1s;
 }
-
 #btnPause {
     background-color: #d69e36;
 }
-
 #btnStop {
     background-color: #b94b4b;
 }
-
 .formBotoes input[type="button"]:hover {
     background-color: #5b91bd;
     color: white;
     cursor: pointer;
 }
-
 .formBotoes input[type="button"]:active {
     transform: scale(0.9);
 }
-
+.boxUsuario {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    color: #dce6f2;
+    font-size: 15px;
+    font-weight: bold;
+}
+.boxUsuario span {
+    margin-right: 10px;
+}
+.formBotoes .boxUsuario input[type="button"] {
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 12px;
+    background-color: #526b89;
+    margin-left: 0px;
+}
+.boxPlacar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.contador {
+    min-width: 180px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #dce6f2;
+    outline: #526b89 solid 2px;
+    outline-offset: 2px;
+    text-align: center;
+}
+.contadorTitulo {
+    font-size: 15px;
+    font-weight: bold;
+    color: #24344d;
+}
+.contadorValor {
+    font-size: 50px;
+    font-weight: bold;
+    color: #3976a8;
+}
+#boxTempo .contadorValor {
+    color: #24344d;
+}
+#boxPassaram .contadorValor {
+    color: #d69e36;
+}
+#boxErros .contadorValor {
+    color: #b94b4b;
+}
 .boxNroAleatorio {
     display: flex;
     justify-content: center;
 }
-
 .boxNroAleatorio p {
     font-size: 250px;
     color: #24344d;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.1s;
+}
+.boxNroAleatorio p.acertou {
+    color: #3976a8;
+}
+.boxNroAleatorio p.errou {
+    color: #b94b4b;
+}
+.boxResultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.resultadoAcertos {
+    font-size: 150px;
+    font-weight: bold;
+    color: #3976a8;
+}
+.resultadoErros {
+    font-size: 40px;
+    font-weight: bold;
+    color: #b94b4b;
+}
+.resultadoTexto {
+    font-size: 20px;
+    color: #24344d;
+    margin-top: 20px;
+}
+@media (max-width: 700px) {
+    .formBotoes {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .boxUsuario {
+        width: 100%;
+    }
+    .formBotoes input[type="button"] {
+        margin-left: 0px;
+    }
+    .boxNroAleatorio p {
+        font-size: 150px;
+    }
+    .resultadoAcertos {
+        font-size: 90px;
+    }
 }
